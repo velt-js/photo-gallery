@@ -31,6 +31,16 @@ const sampleImages = [
   "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1506260408121-e353d10b87c7?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1460627390041-532a28402358?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1516298773066-c48f8e9bd92b?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1498598457418-36ef20772bb9?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1497449493050-aad1e7cad165?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1535463731090-e34f4b5098c5?w=800&auto=format&fit=crop",
 ]
 
 // Sample locations for the photos
@@ -50,6 +60,16 @@ const locations = [
   "Big Sur",
   "Bryce Canyon",
   "Rocky Mountain National Park",
+  "Sequoia National Park",
+  "Joshua Tree National Park",
+  "Great Smoky Mountains",
+  "Monument Valley",
+  "Grand Teton National Park",
+  "Acadia National Park",
+  "Crater Lake",
+  "Death Valley",
+  "Shenandoah Valley",
+  "Denali National Park",
 ]
 
 // Sample titles for the photos
@@ -69,6 +89,16 @@ const titles = [
   "Vibrant landscape",
   "Serene wilderness",
   "Dramatic skies",
+  "Hidden waterfall",
+  "Ancient forest",
+  "Desert bloom",
+  "Mountain stream",
+  "Coastal sunrise",
+  "Enchanted pathway",
+  "Valley vista",
+  "Crystal clear waters",
+  "Rocky shores",
+  "Endless horizon",
 ]
 
 // Store the generated photos in memory
