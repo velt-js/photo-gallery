@@ -134,6 +134,10 @@ body {
       height: 100% !important;
     }
 
+    .velt-inline-comments-section--comment .velt-comment-dialog {
+      border-radius: 0 !important;
+    }
+
     .velt-inline-comments-section--comments {
       margin-top: 0 !important;
     }
