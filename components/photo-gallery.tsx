@@ -11,10 +11,11 @@ import { VeltCommentTool } from "@veltdev/react"
 
 export default function PhotoGallery() {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null)
-  const photos = getPhotos(100)
+  const photos = getPhotos(30)
 
   return (
     <>
+      {/* [VELT] Use data-velt-document-id attribute to set boundary for the document. This is needed because you are rendering multiple documents in the DOM. */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 md:gap-4">
         {photos.map((photo, index) => (
           <div
@@ -23,10 +24,12 @@ export default function PhotoGallery() {
             className="aspect-square relative rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => setSelectedPhoto(index)}
           >
-              <div
-                data-id={photo.id}
+            {/* [VELT] Set the DOM ID as the photo ID to bind the comments to the photo */}
+            <div
+                id={photo.id} 
                 className="absolute bottom-2 right-2 z-10"
               >
+                {/* [VELT] Comment tool and bubble */}
                 <VeltCommentTool targetElementId={photo.id} />
                 <VeltCommentBubble targetElementId={photo.id} />
               </div>

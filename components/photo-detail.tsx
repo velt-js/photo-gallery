@@ -1,11 +1,7 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, MessageSquare, Calendar, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Textarea } from "@/components/ui/textarea"
 import type { Photo } from "@/lib/photo-utils"
 import { VeltInlineCommentsSection } from "@veltdev/react"
 
@@ -15,16 +11,9 @@ interface PhotoDetailProps {
   onPrevious: () => void
 }
 
-interface Comment {
-  id: string
-  author: string
-  avatar: string
-  text: string
-  timestamp: string
-}
-
 export default function PhotoDetail({ photo, onNext, onPrevious }: PhotoDetailProps) {
 
+  {/* [VELT] Use data-velt-document-id attribute to set boundary for the document. This is needed because you are rendering multiple documents in the DOM. */}
   return (
     <div data-velt-document-id={photo.id} className="flex flex-col md:flex-row h-full">
       {/* Photo View */}
@@ -75,8 +64,8 @@ export default function PhotoDetail({ photo, onNext, onPrevious }: PhotoDetailPr
         </button>
       </div>
 
-      {/* Comments Panel */}
-      <div data-id={photo.id} className="w-full md:w-96 h-full bg-white flex flex-col">
+      {/* [VELT] Set the DOM ID as the photo ID to bind the comments to the photo */}
+      <div id={photo.id} className="w-full md:w-96 h-full bg-white flex flex-col">
         <div className="border-b py-3 px-4">
           <div className="flex items-center gap-2 font-medium">
             <MessageSquare className="h-5 w-5" />
@@ -84,7 +73,7 @@ export default function PhotoDetail({ photo, onNext, onPrevious }: PhotoDetailPr
           </div>
         </div>
 
-        {/* Comments List */}
+        {/* [VELT] Velt Inline Comments Section */}
         <div className="flex-1 overflow-y-auto h-full">
           <VeltInlineCommentsSection shadowDom={false} multiThread={false} targetElementId={photo.id} composerPosition="bottom" />
         </div>
