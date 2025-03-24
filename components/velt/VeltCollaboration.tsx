@@ -1,7 +1,7 @@
 import { VeltComments } from '@veltdev/react';
 import VeltInitializeUser from './VeltInitializeUser';
 import VeltInitializeDocument from './VeltInitializeDocument';
-import VeltCustomization from './velt-customization/VeltCustomization';
+import VeltCustomization from './ui-customization/VeltCustomization';
 // [VELT] Installs Velt's root feature components with config, authenticates the user, initializes the document.
 
 export const VeltCollaboration = () => {
