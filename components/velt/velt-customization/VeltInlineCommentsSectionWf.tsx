@@ -1,16 +1,8 @@
-import { VeltCommentDialogWireframe, VeltData, VeltIf, VeltInlineCommentsSectionWireframe, VeltWireframe } from '@veltdev/react';
-import VeltSidebarButtonWf from './VeltSidebarButtonWf';
-import VeltCommentToolWf from './VeltCommentToolWf';
-import VeltCommentBubbleWf from './VeltCommentBubbleWf';
-const VeltCustomization = () => {
-  return (
-    <VeltWireframe>
-      <VeltSidebarButtonWf />
-      <VeltCommentToolWf />
-      <VeltCommentBubbleWf />
-      <VeltCommentDialogWireframe.Header veltIf='{false}' />
+import { VeltCommentDialogWireframe, VeltInlineCommentsSectionWireframe } from '@veltdev/react';
 
-      <VeltInlineCommentsSectionWireframe>
+const VeltInlineCommentsSectionWf = () => {
+  return (
+    <VeltInlineCommentsSectionWireframe>
           <VeltInlineCommentsSectionWireframe.Skeleton />
           <VeltInlineCommentsSectionWireframe.Panel velt-if="{commentAnnotations.length} === 0">
             <div className="flex flex-col justify-between h-full gap-2">
@@ -37,8 +29,7 @@ const VeltCustomization = () => {
           </VeltInlineCommentsSectionWireframe.List>
           </VeltInlineCommentsSectionWireframe.Panel>
       </VeltInlineCommentsSectionWireframe>
-    </VeltWireframe>
   );
 };
 
-export default VeltCustomization;
+export default VeltInlineCommentsSectionWf;
